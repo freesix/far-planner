@@ -214,7 +214,9 @@ public:
     static void Flat3DPointCloud(const PointCloudPtr& cloudIn, 
                                  const PointCloudPtr& cloudFlat,
                                  const bool& is_downsample=true);
-
+    /**
+     * @brief 将输入的点云按照地形分析包计算的指标根据阈值分为自由点云和障碍物点云
+     */
     static void ExtractFreeAndObsCloud(const PointCloudPtr& newCloudIn,
                                        const PointCloudPtr& freeCloudOut,
                                        const PointCloudPtr& obsCloudOut);

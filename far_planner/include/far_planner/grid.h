@@ -157,7 +157,11 @@ public:
   {
     return Pos2Sub(Eigen::Vector3d(x, y, z));
   }
-
+  /**
+   * @brief 将某个位置的三维坐标离散为对应分辨率体素网格的索引
+   * @param pos 三维位置信息
+   * @return 对应的体素网格索引
+   */
   Eigen::Vector3i Pos2Sub(const Eigen::Vector3d& pos) const
   {
     Eigen::Vector3i sub(0, 0, 0);

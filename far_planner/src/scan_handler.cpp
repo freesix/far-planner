@@ -39,8 +39,8 @@ void ScanHandler::UpdateRobotPosition(const Point3D& robot_pos) {
     grid_origin.x() = robot_pos.x - (scan_params_.voxel_size * row_num_) / 2.0f;
     grid_origin.y() = robot_pos.y - (scan_params_.voxel_size * col_num_) / 2.0f;
     grid_origin.z() = robot_pos.z - (scan_params_.voxel_size * level_num_) / 2.0f;
-    voxel_grids_->SetOrigin(grid_origin);
-    center_sub_ = voxel_grids_->Pos2Sub(Eigen::Vector3d(robot_pos.x, robot_pos.y, robot_pos.z));
+    voxel_grids_->SetOrigin(grid_origin); // 设置体素网格的原点
+    center_sub_ = voxel_grids_->Pos2Sub(Eigen::Vector3d(robot_pos.x, robot_pos.y, robot_pos.z)); // 将坐标转换为索引
     center_p_ = FARUtil::Point3DToPCLPoint(robot_pos);
 }
 

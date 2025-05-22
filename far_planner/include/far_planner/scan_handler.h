@@ -24,7 +24,9 @@ public:
     ~ScanHandler() = default;
 
     void Init(const ScanHandlerParams& params);
-
+    /**
+     * @brief 根据机器人当前位置跟新体素栅格地图的远点
+     */
     void UpdateRobotPosition(const Point3D& odom_pos);
     
     void SetCurrentScanCloud(const PointCloudPtr& scanCloudIn, const PointCloudPtr& freeCloudIn);
