@@ -51,6 +51,6 @@ def generate_launch_description():
 
         # Including another launch file
         IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([get_package_share_directory('graph_decoder'), '/launch/decoder.launch'])
+            PythonLaunchDescriptionSource([get_package_share_directory('graph_decoder'), '/launch/decoder.launch.py'])
         )
     ])
